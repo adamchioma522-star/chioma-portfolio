@@ -216,7 +216,7 @@ async function copyText(value,success){
   try{await navigator.clipboard.writeText(value);alert(success)}
   catch(e){const t=document.createElement('textarea');t.value=value;document.body.append(t);t.select();document.execCommand('copy');t.remove();alert(success)}
 }
-document.getElementById('copylink').addEventListener('click', () => copyText('https://adamchioma522-star.github.io/chioma-portfolio/', 'Portfolio link copied! You can now share your live website with employers.'));
+document.getElementById('copyLink').addEventListener('click', () => copyText('https://adamchioma522-star.github.io/chioma-portfolio/', 'Portfolio link copied! You can now share your live website with employers.'));
 const copyEmailButton=document.getElementById('copyEmail');
 if(copyEmailButton) copyEmailButton.addEventListener('click',()=>copyText('adamchioma522@gmail.com','Email address copied.'));
 document.getElementById('year').textContent=new Date().getFullYear();
